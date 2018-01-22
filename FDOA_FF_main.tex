@@ -1,0 +1,102 @@
+\documentclass[12pt]{amsart}
+\usepackage{graphicx}
+\usepackage{url,amstext,amsfonts,amssymb,amscd,amsbsy,amsmath,amsthm,verbatim,mathrsfs}
+\usepackage{ifthen, fullpage, mathrsfs, cite,hyperref}
+%\usepackage[all]{xypic}
+\usepackage{color}
+%\usepackage{algorithm2e}
+\usepackage{algorithm}% http://ctan.org/pkg/algorithm
+\usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
+\usepackage{longtable}
+\usepackage{rotating}
+%\usepackage{natbib}
+
+\usepackage{caption}
+\DeclareCaptionFormat{myformat}{#3}
+%\captionsetup[algorithm]{format=myformat}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{conj}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{lem}[theorem]{Lemma}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{obs}[theorem]{Observation}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{cor}[theorem]{Corollary}
+\newtheorem{computation}[theorem]{Computation}
+\newtheorem{question}[theorem]{Question}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{xca}[theorem]{Exercise}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\V}{\mathcal{V}}
+\newcommand{\I}{\mathcal{I}}
+\newcommand{\ie}{\emph{i.e. }}
+\newcommand{\tdt}{\times\dots\times}
+\newcommand{\otdot}{\otimes\dots\otimes}
+\newcommand{\opdop}{\oplus\dots\oplus}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\adj}{adj}
+\newcommand{\Sub}{\operatorname{Sub}}
+%
+\newcommand{\z}{\mathbf{z}}
+\newcommand{\p}{\mathbf{p}}
+\newcommand{\F}{\mathbf{F}}
+\newcommand{\HH}{\mathbf{H}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\f}{\mathbf{f}}
+\newcommand{\g}{\mathbf{g}}
+\newcommand{\w}{\mathbf{w}}
+
+
+
+\begin{document}
+
+
+\title{A Novel Method for Determining DOA from Far-field TDOA or FDOA}
+\author{Karleigh J. Cameron }
+\author{Samuel J. Pine } % I couldn't get emails/ affiliations to work- we can worry about it later
+
+
+\input{abstract}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
+% Intro / background / lit review ?
+\input{background}
+
+%%%%%%%%%%%%%%%%%%%%%
+% TDOA derivation
+\input{TDOA}
+
+%%%%%%%%%%%%%%%%%%%%%
+% FDOA derivation
+\input{FDOA}
+
+%%%%%%%%%%%%%%%%%%%%%
+% Algorithm description
+\input{algorithm}
+
+%%%%%%%%%%%%%%%%%%%%%
+% Numerical results
+\input{numericalresults}
+
+%%%%%%%%%%%%%%%%%%%%%
+% Future work & conclusion
+\input{conclusion}
+
+
+
+\subsection{Acknowledgments}
+
+\bibliographystyle{abbrv}
+\bibliography{geoloc}
+\end{document}
