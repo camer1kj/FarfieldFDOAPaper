@@ -52,7 +52,8 @@
 \newcommand{\f}{\mathbf{f}}
 \newcommand{\g}{\mathbf{g}}
 \newcommand{\w}{\mathbf{w}}
-
+\newcommand{\mbf}[1]{\mathbf{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
 
 
 \begin{document}
@@ -72,11 +73,10 @@
 %%%%%%%%%%%%%%%%%%%%%
 % Intro / background / lit review ?
 \input{background}
-Let's try this shit out
 
 %%%%%%%%%%%%%%%%%%%%%
 % TDOA derivation
-\input{TDOA}
+%\input{TDOA}
 
 %%%%%%%%%%%%%%%%%%%%%
 % FDOA derivation
@@ -99,5 +99,5 @@ Let's try this shit out
 \subsection{Acknowledgments}
 
 \bibliographystyle{abbrv}
-\bibliography{geoloc}
+\bibliography{fdoa.bib}
 \end{document}
