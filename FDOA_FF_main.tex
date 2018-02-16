@@ -1,7 +1,7 @@
 \documentclass[12pt]{amsart}
 \usepackage{graphicx}
 \usepackage{url,amstext,amsfonts,amssymb,amscd,amsbsy,amsmath,amsthm,verbatim,mathrsfs}
-\usepackage{ifthen, fullpage, mathrsfs, cite,hyperref}
+\usepackage{ifthen, fullpage, mathrsfs, cite,hyperref,framed}
 %\usepackage[all]{xypic}
 \usepackage{color}
 %\usepackage{algorithm2e}
@@ -64,7 +64,7 @@
 \author{Samuel J. Pine } % I couldn't get emails/ affiliations to work- we can worry about it later
 
 
-\input{abstract}
+%\input{abstract}
 
 \maketitle
 
@@ -75,12 +75,12 @@
 \input{background}
 
 %%%%%%%%%%%%%%%%%%%%%
-% TDOA derivation
-%\input{TDOA}
-
-%%%%%%%%%%%%%%%%%%%%%
 % FDOA derivation
 \input{FDOA}
+
+%%%%%%%%%%%%%%%%%%%%%
+% TDOA derivation
+%\input{TDOA}
 
 %%%%%%%%%%%%%%%%%%%%%
 % Algorithm description
@@ -88,7 +88,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%
 % Numerical results
-\input{numericalresults}
+%\input{numericalresults}
 
 %%%%%%%%%%%%%%%%%%%%%
 % Future work & conclusion
@@ -96,7 +96,7 @@
 
 
 
-\subsection{Acknowledgments}
+%\subsection{Acknowledgments}
 
 \bibliographystyle{abbrv}
 \bibliography{fdoa.bib}
