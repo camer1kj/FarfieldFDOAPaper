@@ -1,7 +1,34 @@
 \section{Far-field approximation for TDOA}
-Although the time difference of arrival (TDOA) is a simpler case, we include its far-field approximation for completeness.
+Although the time difference of arrival (TDOA) is simpler than the FDOA case, we include its far-field approximation for completeness.
 
-Using the same problem setup as above, the time delay between receivers $i$ and $j$ is:
+Using the same problem setup as above, the time it takes for the signal to travel between the emitter and receiver $i$ is:
 \begin{align*}
-  \tau_{i,j} = \frac{1}{c}\left(\|\mbf{x_j}-\mbf{x}\| - \|\mbf{x_i}-\mbf{x}\|\right).  
+  \tau_{i} = \frac{1}{c}\|\mbf{x_i}-\mbf{x}\|,
 \end{align*}
+from here the scalar $\frac{1}{c}$ will be left out for simplicity.
+The far-field approximation for $\|\mbf{x_i}-\mbf{x}\|$ is given~\cite{Cheney2009},
+\begin{align*}
+  \|\mbf{x_i}-\mbf{x}\|=\|\mbf{x}\|\left(1-\frac{\mbf{x}_i\cdot\hat{\mbf{x}}}{\|\mbf{x}\|}+\mathcal{O}\left( \frac{\|\mathbf{x}_i\|}{\|\mathbf{x}\|}\right) \right).
+\end{align*}
+Thus, $\tau_{i}$ becomes,
+\begin{align*}
+  \tau_{i} = \|\mbf{x}\| - \mbf{x}_i\cdot\hat{\mbf{x}}.
+\end{align*}
+As in the FDOA case, $\tau_i$ is not observable. Instead we look to the time difference of arrival (TDOA) between receivers $i$ and $j$,
+\begin{align*}
+  \tau_{i,j} =& \; \left(\|\mbf{x}\| - \mbf{x}_j\cdot\hat{\mbf{x}}\right) - \left(\|\mbf{x}\| - \mbf{x}_i\cdot\hat{\mbf{x}}\right) \\
+            =& \; \mbf{x}_i\cdot\hat{\mbf{x}} - \mbf{x}_j\cdot\hat{\mbf{x}} \\
+            =& \; (\mbf{x}_i-\mbf{x}_j)\cdot\hat{\mbf{x}}.
+\end{align*}
+The system of TDOA measurements are equivalent to:
+\begin{align}
+  \pmb{\tau} = -\mbf{PX}\hat{\mbf{x}},
+\end{align}
+where $\mbf{X}$ is the matrix of receiver locations and $\mbf{P}$ is a differencing matrix as before. This suggests that feasible far-field TDOA measurements lie in the image of the unit circle under transformation of $-\mbf{PX}$.
+
+\subsection{Calculating direction of arrival (DOA)}
+As in the FDOA case, the direction of arrival can be calculated using the pseudoinverse:
+\begin{align}
+    \label{eq:doa_t}
+  \hat{\mbf{x}} = -((\mbf{PX})^T\mbf{PX})^{-1}(\mbf{PX})^T\mathbf{f}.
+\end{align}
