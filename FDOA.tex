@@ -31,7 +31,7 @@ d_1 \\ \vdots \\ d_N
 \end{pmatrix}
 \qquad
 \mathbf{V}=\begin{pmatrix}
-\mathbf{v}_1^T \\ \mathbf{v}_2^T \\ \mathbf{v}_3^T
+\mathbf{v}_1^T \\ \vdots\\ \mathbf{v}_N^T
 \end{pmatrix}.
 \end{align*}
 
@@ -55,7 +55,8 @@ This far-field simplification reduces the FDOA equations to a linear system. Thi
   \label{f:ellipse}
 \end{figure}
 
-\red{Include symbolic form of ellipse?}
+One method for denoising in TDOA-based geolocation is the projection of noisy measurements onto the range of the differencing matrix $\mathbf{P}$~\cite{Schmidt1996,Compagnoni2017}. This ensures that the TDOA measurements are physically realizable and consistent between receivers. One benefit of the method for DOA calculation proposed above is that denoising is automatically performed since projection onto the range of $\mathbf{-PV}$ is equivalent to projection onto the range of $\mathbf{P}$.
+%\red{Include symbolic form of ellipse?}
 
 \subsection{Calculating direction of arrival (DOA)}
 The far-field approximated form of the FDOA equations is linear with variable $\hat{\mbf{x}}$, representing the direction of arrival (DOA) of the signal. Thus, the DOA can be found with a linear solve of equation \ref{eq:fdoaFF}. If there are more FDOA measurements than direction components, we can find the least squares solution to the problem, which is also the pseudo-inverse solution:
