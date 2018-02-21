@@ -1,4 +1,4 @@
-\section{Angle of Arrival with FDOA Measurements}
+\section{Direction of Arrival with FDOA Measurements}
 \label{s:FDOA}
 
 Consider a stationary transmitter located at $\mbf{x}$. Suppose we have $N$ receivers located at $\mbf{x}_1, ...,\mbf{x}_N$ with velocities $\mbf{v}_1, ...,\mbf{v}_N$. The frequency shift of the signal between the emitter and the $i^{th}$ receiver is
@@ -7,7 +7,7 @@ Consider a stationary transmitter located at $\mbf{x}$. Suppose we have $N$ rece
   d_i =  \mbf{v}_i^T\cdot\frac{\mbf{x}_i-\mbf{x}}{\|\mbf{x}_i-\mbf{x}\|}.
 \end{align}
 In our scenario, we know the receiver positions and velocities, and we would like to solve for the transmitter position. We cannot measure the frequency shift directly, but we can measure the difference in frequency shifts,
-$f_{i,j} = d_j-d_i$. Scaling by $\|\mbf{x}_i-\mbf{x}\|^{-1}$ means that each of these equations is nonlinear. Even so, by taking pairwise differences of the equations in \eqref{eq:fshift}, one can numerically solve the system by expressing it in terms of polynomials and using techniques like homotopy continuation \cite{Cameron}. %Are there any limitations of this approach? Why would we use our method instead?
+$f_{i,j} = d_j-d_i$. Scaling by $\|\mbf{x}_i-\mbf{x}\|^{-1}$ means that each of these equations is nonlinear. Even so, by taking pairwise differences of the equations in \eqref{eq:fshift}, one can numerically solve the system by expressing it in terms of polynomials and using techniques like homotopy continuation \cite{Cameron}. While such an approach is able to find all solutions, it is computationally more expensive than a linear solve.  
 
 The nonlinearity of \ref{eq:fshift} makes it difficult to accurately solve for $\mbf{x}$, so we simplify the model by deriving a far-field approximation for equation \ref{eq:fshift}.
 
