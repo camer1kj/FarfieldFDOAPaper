@@ -4,7 +4,7 @@ Formulas for calculating the direction of arrival (DOA) of a signal from FDOA or
 \begin{framed}
 \noindent\textbf{Input:}
 \begin{itemize}
-  \item Receiver data: Location and velocity for two time steps. Without loss of generality, assume the receivers are centered at the origin in time step 1, centered at $(c_x,c_y)$ at timestep 2.
+  \item Receiver data: Location and velocity for two time steps. Without loss of generality, assume the receivers are centered at the origin in time step 1, and centered at $(c_x,c_y)$ at timestep 2.
   \item FDOA measurements between all pairs of receivers of the same time step.
 \end{itemize}
 \textbf{Output:}
@@ -22,8 +22,11 @@ Formulas for calculating the direction of arrival (DOA) of a signal from FDOA or
   \item Return $\tilde{\mbf{x}}.$
 \end{enumerate}
 \end{framed}
-\begin{figure}[H]
-  \includegraphics[scale=0.4]{DOA_proofofconcept}
-  \caption{Proof of concept example for the proposed source localization algorithm in 2D with three receivers. In this example, the estimated location is $\tilde{\mbf{x}} = (20.7318,28.5771)$ and the correct location is $\mbf{x} = (20,30)$. The DOA calculations used FDOA measurements.}
-  \label{fig:doa}
-\end{figure}
+
+\begin{center}
+  \begin{figure}[H]
+    \includegraphics[scale=0.5]{DOA_proofofconcept}
+    \caption{Proof of concept example for the proposed source localization algorithm in 2D with three receivers. In this example, the estimated location is $\tilde{\mbf{x}} = (20.7318,28.5771)$ and the correct location is $\mbf{x} = (20,30)$. The DOA calculations used FDOA measurements.}
+    \label{fig:doa}
+  \end{figure}
+\end{center}
