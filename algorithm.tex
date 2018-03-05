@@ -1,6 +1,9 @@
 \section{Source-localization algorithm}
 \label{s:algorithm}
 Formulas for calculating the direction of arrival (DOA) of a signal from FDOA or TDOA measurements were given in equations \ref{eq:doa} and \ref{eq:doa_t}, respectively. If the receivers move, measurements are recorded for a second time step, and the DOA is recalculated, the intersection of these lines will provide an estimate for the emitter location. This simple algorithm (in 2D) is described more precisely below. A schematic of an example run is shown in figure \ref{fig:doa}.
+
+Although the receivers appear to be traveling together in figure \ref{fig:doa}, the receivers must have different velocities when the measurements are taken for all FDOA values to be nonzero. This could be achieved by having the receivers fly together in a group between time steps, then rotate or move apart from each other for FDOA measurement calculation.  
+
 \begin{framed}
 \noindent\textbf{Input:}
 \begin{itemize}
@@ -22,6 +25,7 @@ Formulas for calculating the direction of arrival (DOA) of a signal from FDOA or
   \item Return $\tilde{\mbf{x}}.$
 \end{enumerate}
 \end{framed}
+
 
 \begin{center}
   \begin{figure}[H]
