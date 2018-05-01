@@ -18,14 +18,14 @@ Assume without loss of generality that the receivers are centered around the ori
 \end{align*}
 Truncating after the first term above allows for simplification of the factor (in eq. \ref{eq:fshift}):
 \begin{align*}
-  \frac{\mbf{x}_i-\mbf{x}}{\|\mbf{x}_i-\mbf{x}\|} = \frac{\mbf{x}_i}{\|\mbf{x}\|}-\frac{\mbf{x}}{\|\mbf{x}\|}.
+  \frac{\mbf{x}_i-\mbf{x}}{\|\mbf{x}_i-\mbf{x}\|} \approx \frac{\mbf{x}_i}{\|\mbf{x}\|}-\frac{\mbf{x}}{\|\mbf{x}\|}.
 \end{align*}
 Additionally, the far-field assumption implies that the first term will have small magnitude. Thus, $\dfrac{\mathbf{x_i-x}}{\|\mathbf{x_i-x}\|}$ is simplified to $\dfrac{-\mathbf{x}}{\|\mathbf{x}\|}$.
 Equation \ref{eq:fshift} becomes:
 \begin{align}
   d_i =  -\mbf{v}_i^T\cdot\hat{\mbf{x}},
 \end{align}
-where $\hat{\mbf{x}} = \frac{\mbf{x}}{\|\mbf{x}\|}$, is a unit vector from the centroid of the receivers. The entire system of frequency shifts can be written:
+where $\hat{\mbf{x}} = \frac{\mbf{x}}{\|\mbf{x}\|}$, is the unit vector in the direction of $\mbf{x}$. The entire system of frequency shifts can be written:
 \begin{align}
   \label{eq:fshiftFF}
 \mbf{d} = -\mbf{V}\hat{\mbf{x}},

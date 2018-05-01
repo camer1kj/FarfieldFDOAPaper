@@ -29,7 +29,7 @@ The system of TDOA measurements are equivalent to:
 where $\mbf{X}$ is the matrix of receiver locations and $\mbf{P}$ is a differencing matrix as before. This suggests that feasible far-field TDOA measurements lie in the image of the unit circle under transformation of $-\mbf{PX}$.
 
 \subsection{Calculating direction of arrival (DOA)}
-As in the FDOA case, the direction of arrival can be calculated using the pseudoinverse:
+As in the FDOA case, the least-squares estimate of direction of arrival can be calculated using the pseudoinverse:
 \begin{align}
     \label{eq:doa_t}
   \hat{\mbf{x}} = -((\mbf{PX})^T\mbf{PX})^{-1}(\mbf{PX})^T\mathbf{\tau}.
