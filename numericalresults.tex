@@ -9,14 +9,20 @@ where $E\left[\delta \mathbf{f}\right]=0$ and $E\left[\delta\mathbf{f}\delta\mat
 
 The CRLB of an unbiased estimator is the inverse of the Fisher information matrix, $\mbf{J}$. For the FDOA based AOA problem, this is given by~\cite{Ho1997}:
 \begin{align*}
-\mbf{J}_{FDOA+AOA} = \left[\left(\frac{\partial\mbf{f}^{0T}}{\partial\mbf{x}}\cdot\frac{\partial\mbf{x}}{\partial\theta}\right)\mbf{Q}^{-1}\left(\frac{\partial \mbf{f}^0}{\partial\mbf{x}^T}\cdot\frac{\partial\mbf{x}^T}{\partial\theta}\right)\right]_\mbf{x=x^0},
+\mbf{J} = \left[\left(\frac{\partial\mbf{f}^{0T}}{\partial\mbf{x}}\cdot\frac{\partial\mbf{x}}{\partial\theta}\right)\mbf{Q}^{-1}\left(\frac{\partial \mbf{f}^0}{\partial\mbf{x}^T}\cdot\frac{\partial\mbf{x}^T}{\partial\theta}\right)\right]_\mbf{x=x^0},
 \end{align*}
 where $^0$ denotes noise free measurements. This can be calculated for a theoretical set of measurements (noise free), covariance matrix (corresponding to noise), and emitter location. The result is a single value whose inverse is the CRLB for AOA.
 
 \begin{figure}
-  \includegraphics[scale=0.8]{CRLBcompare1}
+  \includegraphics[scale=0.8]{CRLBcompare}
   \caption{Log-log plot of DOA estimator error vs. the Cramer Rao lower bound on FDOA-based DOA variance. }
   \label{CRLB}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[scale=0.3]{sensor_config_arrow}
+  \caption{Sensor configuration for CRB comparison in Fig.~\ref{CRLB}.}
+  \label{config}
 \end{figure}
 
 Numerical trials can then be run with our DOA approximation method and the variance in DOA can be compared to the CRLB. This is the content of Figure \ref{CRLB}. The $x$-axis gives varying levels of noise power and the $y$-axis shows corresponding AOA variance for our approximation and the CRLB. It is clear that the AOA variance trend mimics that of the CRLB.
