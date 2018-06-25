@@ -9,10 +9,11 @@ where $E\left[\delta \mathbf{f}\right]=0$ and $E\left[\delta\mathbf{f}\delta\mat
 
 The CRLB of an unbiased estimator is the inverse of the Fisher information matrix, $\mbf{J}$. For the FDOA based AOA problem, this is given by~\cite{Ho1997}:
 \begin{align*}
-\mbf{J} = \left[\left(\frac{\partial\mbf{f}^{0T}}{\partial\mbf{x}}\cdot\frac{\partial\mbf{x}}{\partial\theta}\right)\mbf{Q}^{-1}\left(\frac{\partial \mbf{f}^0}{\partial\mbf{x}^T}\cdot\frac{\partial\mbf{x}^T}{\partial\theta}\right)\right]_\mbf{x=x^0},
+\mbf{J}(\mbf{x},\mbf{X},\mbf{V}; \mbf{Q}) = \left(\frac{\partial\mbf{f}^{T}}{\partial\mbf{x}}\cdot\frac{\partial\mbf{x}}{\partial\theta}\right)\mbf{Q}^{-1}\left(\frac{\partial \mbf{f}}{\partial\mbf{x}^T}\cdot\frac{\partial\mbf{x}^T}{\partial\theta}\right).
 \end{align*}
-where $^0$ denotes noise free measurements. This can be calculated for a theoretical set of measurements (noise free), covariance matrix (corresponding to noise), and emitter location. The result is a single value whose inverse is the CRLB for AOA.
+ This can be calculated for a theoretical set of receiver positions ($\mbf{X}$), velocities ($\mbf{V}$), covariance matrix ($\mbf{Q}$), and emitter location ($\mbf{x}$). The result is a single value whose inverse is the CRLB for AOA.
 
+%% Somewhere here we need to include a measure of how 'far-field' we are. One good measure might be the mean of |x_i| divided by |x|. Then we can maybe include a couple of these graphs for one really far field and one near-er field. Then we can include a short discussion of this.
 \begin{figure}
   \includegraphics[scale=0.8]{CRLBcompare}
   \caption{Log-log plot of DOA estimator error vs. the Cramer Rao lower bound on FDOA-based DOA variance. }
